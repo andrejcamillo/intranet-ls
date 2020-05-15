@@ -1,0 +1,117 @@
+<html>
+    <head>
+        <title>Intranet LS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../css/estilo.css"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </head>
+    <body>
+       <div class='topo'>
+            <div class="topo_int">
+             <img src="../img/logo_ls_extendida_v2.jpg" width="1440" height="180">
+            </div>
+        </div>
+        
+        <div class='menu'>
+            <div class='menu_int'>
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                      <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+                      <ul class="navbar-nav mr-auto">
+                        <li class="nav-item menu_pipe">
+                          <a class="nav-link" href="../index.html">Home <span class="sr-only">(página atual)</span> <img src="..\img\house.png"></a>
+                        </li>
+                        <li class="nav-item menu_pipe">
+                          <a class="nav-link" href="config.php">LS_Config <img src="..\img\calendar.png"></a>
+                        </li>
+                        <li class="nav-item dropdown menu_pipe active">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Procedimentos <img src="..\img\process.png">
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="instalacao.html">Instalação</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="dll.html">Registrar DLL's</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="instalacaoPaf.html">Instalação PAF</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="configTef.html">Dados para configuração de TEF</a>
+                          </div>
+                        </li>
+                        <li class="nav-item menu_pipe">
+                          <a class="nav-link" href="clientes.html">Cliente <img src="..\img\boy.png"></a>
+                        </li>
+                        <li class="nav-item menu_pipe">
+                          <a class="nav-link" href="comandos.php">Comandos <img src="..\img\data.png"></a>
+                        </li>
+                        <li class="nav-item menu_pipe">
+                          <a class="nav-link" href="links.html">Links Úteis <img src="..\img\link.png"></a>
+                        </li>
+                        <li class="nav-item opcao_menu menu_pipe">
+                          <a class="nav-link" href="..\views\senhas.html">Senhas LS <img src="..\img\key.png"></a>
+                        </li>
+                      </ul>
+                      <form class="form-inline my-2 my-lg-0">
+                        
+                      </form>
+                    </div>
+                  </nav>
+            </div>
+        </div>
+        
+        <div class='conteudo'>
+            <div class='conteudo_int_PAF'> <br><br>
+                <div class="alinhar">
+                    <h2>Instalação e Configuração do PAF </h2><br><br>
+                </div>
+                
+                    <ul>
+                        <li>Acessar o endereço \\10.0.0.201\Publico\Suporte\PAF.<br></li>
+                        <li>Transferir o arquivo PAF.rar para o computador do cliente, criar uma pasta e extrair dentro dessa pasta.</li><br>
+                        <li>Executar o instalador Firebird.exe. Não precisa alterar nada, somente ir clicando em avançar até concluir a instalação.</li><br>
+                        <li>Executar o instalador LS PAFECF Setup.exe. Só ir avançando e no final, DESMARCAR na última tela a opção "Executar".  <li>Após clicar em concluir.</li><br>
+                        <li>Acessar a pasta \\10.0.0.201\Publico\Suporte\PAF\Config. Copiar o arquivo LS PAF Config.exe e colar na pasta de instalação do PAF.</li><br>
+                        <li>Executar o LS PAF Config.exe, ir na aba ECF Autorizados para funcionamento.</li><br>
+                        <li>Selecionar o modelo da impressora e a porta COM que ela está conectada, após isso clicar em Capturar.</li><br>
+                        <li>Será preenchido os campos da parte de sistema, anote esses dados pois será utilizado posteriormente.</li><br>
+                        <li>Para preencher o CNIEE é necessário acessar o caminho \\10.0.0.201\Publico\Suporte\PAF e abrir o arquivo CNIEE.pdf.</li><br>
+                        <li>Dentro do pdf busque o modelo da impressora e copie o CNIEE para preencher no LS PAF Config.</li><br>
+                        <li>Após preencher as informações clicar em Adicionar ECF. Após isso clicar em Salvar Arquivo Auxiliar.</li><br>
+                        <li>Ao terminal a configuração da impressora é necessário que seja excluído o arquivo LS PAF Config.exe da pasta do PAF.</li><br>
+                        <li>Acessar o sistema LS, ir em Configurações > Sistema > Impressora Fiscal > Novo e preenhcer os campos conforme dados da impressora.</li><br>
+                        <li>Acessar o endereço C:\Program Files (x86)\LS PAFECF, abrir o arquivo LS_PAF_Config.ini e preencher com as seguintes informações:</li><br>
+                            <ol>
+                                <li>ERPHost = Endereço do servidor onde está a base do PostgreSQL.</li><br>
+                                <li>ERPBase = Nome da base de dados do PostgreSQL.</li><br>
+                                <li>ERPPort = Porta do PostgreSQL no servidor.</li><br>
+                                <li>Filial = Número da filial no sistema LS.</li><br>
+                                <li>IdECF = Código da Impressora Fiscal cadastrada no sistema LS.</li><br>
+                                <li>NFeSerie = Série de emissão de NFe do sistema LS + 1.</li><br>
+                            </ol>
+                        <li>Executar o instalador LS PAFECF Servico Setup.exe. Não precisa alterar nada, somente ir clicando em avançar até concluir a instalação.</li><br>
+                        <li>Acessar o endereço C:\Program Files (x86)\LS PAFECF Srv, abrir o arquivo LS_PAF_Config.Ini e preencher com as seguintes informações:</li><br>
+                            <ol>
+                                <li>ERPHost = Endereço do servidor onde está a base do PostgreSQL.</li><br>
+                                <li>ERPBase = Nome da base de dados do PostgreSQL.</li><br>
+                                <li>ERPPort = Porta do PostgreSQL no servidor.</li><br>
+                                <li>PAFBase = Endereço completo da base do PAF da instalação do LS PAFECF. Ex.: C:\Program Files (x86)\LS PAFECF\LS_PAFECF.FDB.</li><br>
+                                <li>Filial = Número da filial no sistema LS.</li><br>
+                                <li>IdECF = Código da Impressora Fiscal cadastrada no sistema LS.</li><br>
+                                <li>NFeSerie = Série de emissão de NFe do sistema LS + 1.</li><br>
+                            </ol>
+                        <li>Buscar no menu iniciar o CMD, executar como Administrador, acessar a pasta da PAF através do comando "cd caminho_da_pasta"</li><br>
+                        <li>Instalar o serviço LS_PAF_Srv através do comando "LS_PAF_Srv.exe /install".</li><br>
+                        <li>Aperte Ctrl + R e execute o comando services.msc, localize o serviço LS_PAF_ECF e clique em Iniciar.</li><br>
+                        <li>Execute o arquivo LS_PAFECF.exe e analise se irá executar corretamente.</li><br>
+                        <li>Para trocar a logo é necessário colocar a logo da empresa na pasta do PAF no formato .png para que o sistema reconheça.</li>
+                    </ul><br><br><br>
+                
+            </div>
+        </div>
+        
+        
+    </body>
+</html>

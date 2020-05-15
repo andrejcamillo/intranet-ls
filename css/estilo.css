@@ -1,0 +1,166 @@
+body {
+    background-color: #d4d4d4 !important;
+    color: black !important;
+    font-family: Arial;
+    margin: 0px !important;
+}
+
+li:hover {
+    background-color: #0b91d0;
+    border-radius: 10px 10px 10px 10px;
+    color: black !important;
+}
+
+.topo {
+    width: 100%;
+    height: 180px;
+    margin-top: 0px;
+}
+
+.aviso {
+    color: red;
+}
+
+#topo > img {
+    width: 100%;
+    height: 100%;
+}
+.topo_int {
+    width: 1440px;
+    height: 180px;
+    margin: auto;
+    text-align: center;
+    background-color: black;
+}
+
+img.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+   
+    float: left;
+    margin-left: 300px;
+}
+
+.logo_lse {
+    float: none;
+    
+    
+}
+
+.menu {
+    width: 100%;
+    height: auto;
+}
+
+.menu_int {
+    width: 1440px;
+    height: auto;
+    margin:auto;
+    border-radius: 0px 0px 15px 15px;
+}
+
+.navbar {
+    border-radius: 0 0 25px 25px;
+}
+
+.conteudo {
+    width: 100%;
+    height: auto;
+    min-height: 600px;
+}
+
+.conteudo_int {
+    width: 1440px;
+    height: auto;
+    min-height: 600px;
+    margin: auto;
+    background-color: #d4d4d4;
+    text-align: center;
+    font-size: 18px;
+}
+
+.conteudo_int_test {
+    width: 1440px;
+    height: auto;
+    min-height: 600px;
+    margin: auto;
+    background-color: #d4d4d4;
+    font-size: 14px;
+}
+
+.conteudo_int_align {
+    text-align: center;
+}
+
+.conteudo_linkHTML {
+    font-size: 16px;
+}
+
+.img_urina {
+    border-radius: 15px;
+}
+
+.conteudo_comandos {
+    width: 100%;
+    min-height: 350px;
+    height: auto;
+}
+
+.conteudo_comandos_int {
+    width: 800px;
+    min-height: 350px;
+    height: auto;
+    text-align: center;
+    margin: auto;
+    font-size: 10;
+}
+
+.tabela_comandos {
+    width: 100%;
+    min-height: 300px;
+    height: auto;
+}
+
+.tabela_comandos_int {
+    width: 1440px;
+    min-height: 300px;
+    height: auto;
+    text-align: center;
+    margin: auto;
+}
+
+.img_izi {
+    border-radius: 75px;
+}
+
+.img_izi:hover {
+    width: 100px;
+}
+
+.small_text {
+    color: red !important;
+}
+
+.menu_pipe {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.conteudo_int_PAF{
+    width: 1440px;
+    height: auto;
+    min-height: 600px;
+    margin: auto;
+    background-color: #d4d4d4;
+    font-size: 16px;
+}
+
+.alinhar {
+    text-align: center;
+}
+
+li:hover {
+    color: white !important;
+    font-weight: bold;
+}

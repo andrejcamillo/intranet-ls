@@ -1,0 +1,239 @@
+<html>
+    <head>
+        <title>Intranet LS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../css/estilo.css"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </head>
+    <body>
+       <div class='topo'>
+            <div class="topo_int">
+             <img src="../img/logo_ls_extendida_v2.jpg" width="1440" height="180">
+            </div>
+        </div>
+        
+        <div class='menu'>
+            <div class='menu_int'>
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                      <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+                      <ul class="navbar-nav mr-auto">
+                        <li class="nav-item menu_pipe">
+                          <a class="nav-link" href="../index.html">Home <span class="sr-only">(página atual)</span> <img src="..\img\house.png"></a>
+                        </li>
+                        <li class="nav-item menu_pipe">
+                          <a class="nav-link" href="config.php">LS_Config <img src="..\img\calendar.png"></a>
+                        </li>
+                        <li class="nav-item dropdown menu_pipe active">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Procedimentos <img src="..\img\process.png">
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="instalacao.html">Instalação</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="dll.html">Registrar DLL's</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="instalacaoPaf.html">Instalação PAF</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="configTef.html">Dados para configuração de TEF</a>
+                          </div>
+                        </li>
+                        <li class="nav-item menu_pipe">
+                          <a class="nav-link" href="clientes.html">Cliente <img src="..\img\boy.png"></a>
+                        </li>
+                        <li class="nav-item menu_pipe">
+                          <a class="nav-link" href="comandos.php">Comandos <img src="..\img\data.png"></a>
+                        </li>
+                        <li class="nav-item menu_pipe">
+                          <a class="nav-link" href="links.html">Links Úteis <img src="..\img\link.png"></a>
+                        </li>
+                        <li class="nav-item opcao_menu menu_pipe">
+                          <a class="nav-link" href="..\views\senhas.html">Senhas LS <img src="..\img\key.png"></a>
+                        </li>
+                      </ul>
+                      <form class="form-inline my-2 my-lg-0">
+                        
+                      </form>
+                    </div>
+                  </nav>
+            </div>
+        </div>
+        
+        <div class='conteudo'>
+            <div class='conteudo_int_test'> <br><br>
+                
+                <div class='conteudo_int_align'><h2> Instalação do Sistema </h2></div><br>
+
+                <b>Arquivos necessários para download</b><br>
+                <ul>
+                  <li>Crie uma pasta na área de trabalho ou download chamada "Instalação LS Tech" ou algum nome de sua escolha para destinar os arquivos necessários.</li><br>
+                  <li>https://lstech.systems/ls/ > No canto superior esquerdo terá acesso ao menu vai em Download > Clique no botão "Localizar" para ter acesso a todos os arquivos.</li><br>
+                  <li>Para uma instalação é necessário os seguintes arquivos:</li><br>
+                    <ul>
+                      <li>Configurador de Registro</li><br>
+                      <li>Instalador - LS Commerce V5 - Servidor</li><br>
+                      <li>PostgreSQL 9.5 (32bits ou 64bits) depende do sistema operacional (caso tenha dúvidas, aperte Windows + Pause Break e confirme)</li><br>
+                      <li>Trocar Senha do DB</li><br>
+                      <li>LS_Serviço</li><br>
+                      <li>LS_CV5 (Executável atual)</li><br>
+                      <li>Também serão necessários alguns arquivos adicionais atualizados, os mesmos podem ser encontrador na pasta dentro de nosso servidor (\\SRV01\Publico\Suporte\Aplicativos LS):</li><br>
+                      <li>Ls_cv5 e ls_cv5_file vazio (na versão mais atual, verifique pela data de modificação) (em caso de sistema BASIC, procure por ls_basic vazio)</li><br>
+                    </ul>
+                </ul>
+
+                <b>Instalando o banco de dados</b><br>
+
+                <ul>
+                  <li>Execute o Postgre de acordo com a versão do sistema operacional (32 bits ou 64 bits).</li><br>
+                  <li>Ao executar será aberta uma janela de setup - PostgreSQL, nesta tela clique em Next.></li><br>
+                  <li>Selecione o local de instalação do programa e clique em Next (pode deixar a pasta padrão).></li><br>
+                  <li>Selecione o local de instalação do diretorio "Data" e clique em Next (pode deixar a pasta padrão) > É preferível colocar a instalação no disco que tem mais espaço.</li><br>
+                  <li>Na proxima tela digite a senha padrão (ellsisayss) e clique em next ></li><br>
+                  <li>Na proxima tela em "Port" digite o "5" + o código do cliente de acordo com o Work (nosso sistema), cadastro > cliente. Ex. 5193 Sendo 193 o código da LS cadastrada no sistema LS Work.</li><br>
+                  <li>Clique em Next > Na próxima tela clique em Next > Next > novamente e aguarde até a instalação ser concluída.</li><br>
+                  <li>Concluir a instalação, abrirá uma janela de informação de que foi completado a instalação.</li><br>
+                  <li>Nesta janela desmarque a caixa de solicitação para download e instalação de configuraçõesb adicionais e clique em Finish.</li><br>
+                  <li>Após instalado localize e abra o "PgAdmin" em localizar programa.</li><br>
+                  <li>Depois de abrir clique duas vezes na base "Postgresql 9.5" e digite a senha padrão (ellsisayss).</li><br>
+                  <li>Clique com o botão direito do mouse em "banco de dados ou databases" e depois clique em "Nova Base Ou New Database".</li><br>
+                  <li>Na janela que abrir digite as seguintes informações:</li><br>
+                  <li>Para LS Profissional e superiores</li><br>
+                  <li>Nome: ls_cv5</li><br>
+                  <li>Dono ou owner: Postgres</li><br>
+                  <li>Na aba definition ou definição Template: Template0</li><br>
+                  <li>Logo após clique em Ok.</li><br><br>
+
+                  <ul>
+                    <li>Crie uma segunda base com as seguintes informações:</li><br>
+                    <li>Nome: ls_cv5_file</li><br>
+                    <li>Dono ou owner: Postgres</li><br>
+                    <li>Na aba definition ou definição Template: Template0</li><br>
+                    <li>Logo após clique em Ok.</li><br><br>
+                  </ul>
+
+                  <ul>
+                    <li>Para LS Basic e Basic Pro</li><br>
+                    <li>Nome: Ls_Basic</li><br>
+                    <li>Dono ou owner: Postgres</li><br>
+                    <li>Na aba definition ou definição Template: Template 0</li><br>
+                    <li>Logo após clique em Ok.</li><br>
+                    <li>Nesta Versão não existe a segunda base "ls_basic_file"</li><br><br>
+                  </ul>
+
+                  <ul>
+                    <li>Após criar as bases clique com o botão direito sobre elas.</li><br>
+                    <li>Depois clique em "restaurar ou restore" para restaurar o Backup de uma base vazia (DB VAZIO) ou de uma base importada (QUANDO O CLIENTE QUER UMA REINSTALAÇÃO).</li><br>
+                    <li>Selecione o local onde o arquivo de backup está salva e logo após clique em restaurar ou restore.</li><br>
+                    <li>Após finalizada a restauração clique em "Done" ou simplesmente feche a janela.</li><br>
+                    <li>Feito isso feche o Pgadmin.</li><br>
+                  </ul>
+                </ul>
+
+                <b>Instalação sistema LS</b><br>
+
+                <ul>
+                  <li>Execute o (Instalador LS Commerce V5 Servidor).</li><br>
+                  <li>Abrirá uma janela de instalação do sistema, clique em avançar.</li><br>
+                  <li>Aceite os termos do contrato da Licença e clique em avançar.</li><br>
+                  <li>Selecione o local de instalação e clique em avançar.</li><br>
+                  <li>Nas próximas telas clique em "Avançar" até começar a instalação do sistema.</li><br>
+                  <li>Após concluir a instalação clique em "Finalizar".</li><br>
+                </ul>
+
+
+                <b>Configurando o sistema</b><br>
+
+                <ul>
+                  <li>Após finalizar as instalações do banco de dados e aplicativo,  abra a pasta onde o Postgre foi instalado geralmente em "C:\Program Files\PostgreSQL\9.5\Data"</li><br>
+
+                  <ul>
+                    <li>Abra o arquivo "pg_hba.conf" no bloco de notas.</li><br>
+                    <li>Logo abaixo da linha  # hostnossl    Database    User    Address Method [Options]:</li><br>
+                    <li>Apague o #, deixando um espaço da margem, insira a seguinte linha:" host        all    all    0.0.0.0    0.0.0.0 md5 "</li><br>
+                    <li>Feche e salve o arquivo.</li><br>
+                  </ul>
+
+                  <li>Faça a liberação da porta do Postgre no firewall do Windows.</li><br>
+                  <li>Vá em Painel de Controle\Sistema e Segurança\Firewall do Windows ou aperte em seu teclado Windows + R, digite "firewall.cpl" e tecle ENTER</li><br>
+                  <li>Clique em "Configurações Avançadas" no lado esquerdo da tela. Após isso, terá duas opções de abas nomeadas Regras de Entrada e Regras de Saída.</li><br>
+                  <li>Vamos primeiro na Regras de Entrada, clique nesta aba e clique na opção Nova Regra, localizada no lado direito desta mesma tela.</li><br>
+                  <li>Nesta próxima tela, marque a opção "Porta" e avance, agora deixe marcado TCP e preencha no local indicado a porta correspondente ao cliente conforme explicado no passo 6 e avance.</li><br>
+                  <li>Na próxima tela deixe marcado "Permitir Conexão" e avance.</li><br>
+                  <li>Agora deixe marcado as 3 opções que são "Domínio, particular e público" e avance. Na proxima tela coloque LSTECH no nome e conclua (não é necessário preencher a descrição).</li><br>
+                  <li>Faça as mesmas configurações na aba Regras de Saída.</li><br>
+                  <li>Abra a pasta de instalação do sistema LS geralmente localizada em: "C:\Arquivos De Programas (X86)\Ls Commerce V5"</li><br>
+                  <li>Abra o arquivo Ls_Config.ini</li><br>
+                  <li>Na linha endereço digite o IP do computador onde foi instalado o Postgre.</li><br>
+                  <li>Exemplo: Endereço 10.0.0.5 (Para verificar o IP da máquina digite bandeira do Windows + R > cmd > ipconfig > Pega a informação do endereço IPv4.</li><br>
+                  <li>Em "porta" digite o número da porta que definiu na instalação do Postgre (Passo 6 de instalando o banco de dados).</li><br>
+                  <li>Na linha DirBackup digite o local onde o backup do sistema será feito.</li><br>
+                  <li>Salve as alterações e feche o arquivo.</li><br>
+                  <li>Execute o arquivo "Trocar Senha Db" na pasta do sistema "C:\Arquivos De Programas (X86)\LS Commerce V5".</li><br>
+                  <li>Se estiver em VERDE clique somente em "Executar atualização" e feche a janela, caso não esteja, verifique se os parâmetros inseridos dentro do LS Config estão corretos.</li><br>
+                  <li>Execute  dentro da pasta do sistema o aplicativo "Configuração de registro"</li><br>
+                  <li>Copie os arquivos "capicom.dll, midas.dll, msxml5.dll, msxml5r.dll" Dlls necessárias para instalação do certificado.</li><br>
+                  <li>Cole os arquivos copiados em "C:\Windows\System32" e "C:\Windows\Syswow64" (Se o sistema for X64).</li><br>
+                  <li>Execute o cmd em modo de Administrador.</li><br>
+                  <li>Execute os seguintes comandos, um de cada vez: regsvr32 capicom.dll, regsv32 midas.dll e regsvr32 msxml5.dll.</li><br>
+                  <li>Feche o cmd.</li><br>
+                  <li>Baixe o último executável LS_CV5 e coloque na pasta do sistema "C:\Arquivos De Programas (X86)\LS Commerce V5".</li><br>
+                  <li>Compartilhe a pasta do sistema indo em C:\Arquivos De Programas (X86)\LS Commerce V5 > botão direito "Propriedades" > aba Compartilhamento > Compartilhamento avançado.</li><br>
+                  <li>Marque a opção "Compartilhar pasta" > Permissões > Marque a opção "Controle total".</li><br>
+                  <li>Também altere as configurações de permissão de pasta acessando a aba "Segurança", clique na opção "Editar", aperte em "Adicionar", escreva "Todos".</li><br>
+                  <li>Selecione a opção "verificar nomes" e tecle ok, agora vá em todas as opções (Todos, usuários, administradores, etc) e dê todas as permissões disponíveis abaixo.</li><br><br>
+                </ul>
+
+                <b>Previnir erro C12</b><br>
+
+                <ul>
+                  <li>Pressionar "Tecla Windows + R" digitar "services.msc"</li><br>
+                  <li>Localize o serviço "Detecção de serviço interativo" (basta digitar "det" em seu teclado na tela para localizar), clique em propriedades e na opção "tipo de inicialização", marque "desativado", clique um OK .</li><br>
+                  <li>Localizar o serviço PostgreSQL (basta digitar "pos" em seu teclado na tela para localizar).</li><br>
+                  <li>Clicar com o Botão direito no mouse em cima do serviço e abrir "Propriedades".</li><br>
+                  <li>Alternar para aba "Logon" e marcar a opção "Conta do Sistema Local" e "Permitir que o serviço interaja....".</li><br>
+                  <li>Alternar para aba "Recuperação", deixar as 3 opções como "Reiniciar Serviço", pressionar Aplicar e depois OK.</li><br>
+                  <li>Reinicie o serviço e pronto.</li><br>
+                  <li>Pressionar "Tecla Windows + R" Digitar cmd.</li><br>
+                  <li>No CMD digitar "ipconfig".</li><br>
+                  <li>Verificar se o IP está com uma numeração baixa.</li><br>
+                  <li>Digitar ainda no CMD: "ncpa.cpl" Isso vai abrir a Conexão de Rede;</li><br>
+                  <li>Alterar o IP Para um IP com a numeração Alta (padrão 192.168.0.200), o ideal é que seja feito um ping a esse ip para verificar se o mesmo já não está sendo utilizado antes de mudar.</li><br>
+                  <li>Criar a Reserva de IP no Modem ou Roteador.</li><br><br>
+                </ul>
+
+                <b>Configurando o Backup Automático</b><br>
+
+                <ul>
+                  <li>Crie no disco local C: uma pasta com o nome de "sistema" e dentro da pasta sistema outra pasta com o nome "backup".</li><br>
+                  <li>Dentro da pasta backup cole todas as DLLs da pasta "C:\Program Files\Postgresql\9.5\Bin" e também o arquivo "Pg_Dump" e "Pg_Restore".</li><br>
+                  <li>Execute o CMD como "Administrador" e navegue até a pasta de instalação do sistema LS (utilize o comando "cd C:\Program Files (x86)\LS Commerce V5").</li><br>
+                  <li>Ao localizar a pasta do sistema LS através do CMD execute e seguinte comando: LS_Servico.exe /install (lembrando que o arquivo ls_servico atualizado precisa estar na pasta do sistema).</li><br>
+                  <li>Após instalado o serviço feche o cmd.</li><br>
+                  <li>Acesse a página de serviços (windows + R e service.msc) e verifique se o serviço "ls_servico" está parado, caso esteja iniciado, pare-o (mantenha a tela aberta).</li><br>
+                  <li>Abra o arquivo "LS_Config" localizado na pasta de instalação do sistema LS "C:\Arquivos de Programas (X86)\Ls Commerce V5".</li><br>
+                  <li>No arquivo insira a seguinte linha: DirPGDump = C:\Sistema\Backup (aqui serão adicionado somentes as DLLs e os arquivos Pg_Dump E Pg_Restore e mantenha o arquivo aberto).</li><br>
+                  <li>Localize a pasta C: do sistema, crie uma pasta nomeada Backup_LS dentro da mesma.</li><br>
+                  <li>No arquivo aberto anteriormente (Ls_Config), insira a linha: DirBackup = C:\Backup_LS LS a cima da linha "DirPGDump". </li><br>
+                  <li>Salve e feche o arquivo.</li><br>
+                  <li>Abra o sistema LS.</li><br>
+                  <li>Clique em "LS Tech" localizado no canto superior esquerdo da tela.</li><br>
+                  <li>Clique em sobre.</li><br>
+                  <li>Pressione Ctrl + Alt + L.</li><br>
+                  <li>Utilize o comando "update configuracao set backup_last = '2017-01-01' (dia anterior da data atual no padrão ingles AAAA-MM-DD, por exemplo, se hoje é 10-10-2017, utilize 2017-10-09).</li><br>
+                  <li>Inicie o serviço ls_servico.</li><br>
+                  <li>Volte na tela de comandos e Cole o Comando: Update Configuracao Set Ls_Servico = Current_Timestamp</li><br>
+                  <li>Precione F2 para executar, se o comando rodar sem erros feche a janela.</li><br>
+                  <li>Pode fechar as telas anteriores.</li><br>
+                  <li>Abra o arquivo ls_servico.log e espere 5 minutos após o tempo de inicialização do serviço.</li><br>
+                  <li>Após os 5 minutos, feche o arquivo e abra novamente, caso tenha uma linha mostrando "backup criado", quer dizer que o backup automático foi configurado com sucesso.</li><br>
+                </ul>
+                
+            </div>
+        </div>
+        
+        
+    </body>
+</html>
